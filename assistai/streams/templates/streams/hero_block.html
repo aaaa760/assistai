@@ -1,0 +1,42 @@
+{% load wagtailcore_tags wagtailimages_tags  %}
+  <section class="py-[100px]">
+    <div class="max-w-[1140px] w-full px-[15px] mx-auto">
+        <div class="text-left flex flex-wrap items-center justify-between flex-row">
+
+            <!-- Left part -->
+            <div class="w-5/12">
+                <h1 class="text-[48px]">
+                    
+                    {{self.banner_title}}
+                    
+                </h1>
+                <p class="mt-[20px] text-sm">
+
+                    {{self.banner_sub_title|richtext}}
+                    
+                </p>
+                <div class="w-full mb-0 mt-[20px]">
+                    <div class="max-w-[450px] flex ml-0	">
+                        <input type="email" placeholder="Enter your work email" class="border p-[10px] w-8/12 border-black">
+                        <button class="bg-amber-300 p-[10px] rounded-sm">Get a Demo</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Part -->
+            <div class="w-6/12 ">
+                <!-- <img src="https://assets.www.happyfox.com/v2/images/hero-fold/AI_Image.webp" class="w-full"> -->
+                {% image page.banner_image width-1000 %}
+            </div>
+
+        </div>
+
+        <div class="relative max-w-[150px] mx-auto my-0	">
+            <img src="https://assets.www.happyfox.com/v2/images/hero-fold/AI_Arrow.svg" class="pl-[70px]">
+            <p class="mt-[25px] inline-flex p-[10px] shadow-black w-[190px] items-center justify-between">
+                <img src="https://assets.www.happyfox.com/v2/images/version_2_play.svg">
+                Watch the Video
+            </p>
+        </div>
+    </div>
+  </section>

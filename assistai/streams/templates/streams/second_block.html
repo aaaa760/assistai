@@ -1,0 +1,15 @@
+{% load wagtailimages_tags %}
+
+<div class="w-4/5 mx-auto flex flex-row py-16">
+    <div class="w-1/2 px-12 py-4 pt-28">
+        <h1 class="mb-8 leading-10 font-medium text-[32px] text-[#212529]">{{ self.heading }}</h1>
+        <h2 class="text-[16px] font-normal  mb-2 leading-6 text-[#212529]">{{ self.question }}</h2>
+        <h2 class="text-[16px] text-[#555] leading-6">{{ self.answer }}</h2>
+    </div>
+    <div class="w-1/2 p-4 py-8 pt-16 flex items-center justify-center">
+        {% image self.image width-800 as second_image %}
+        {% if second_image %}
+            <img src="{{ second_image.url }}" alt="{{ self.heading }}" class="max-w-full h-auto">
+        {% endif %}
+    </div>
+</div>

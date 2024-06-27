@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% load wagtailcore_tags wagtailimages_tags %}
+{% block content %}
+{% include 'navbar.html' %}
+{% include 'header.html' %}
+
+{% for block in page.hero_block%}
+{% include_block block %}
+    
+{% endfor %}
+
+{% for block in page.second_block %}
+{% include_block block %}
+{% endfor %}
+
+
+{% endblock  %}
+
+
